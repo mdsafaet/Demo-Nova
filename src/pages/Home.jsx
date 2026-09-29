@@ -9,6 +9,9 @@ import Responsibility from "@/components/home/Responsibility";
 import Journal from "@/components/home/Journal";
 import Contact from "@/components/home/Contact";
 import DetailDialog from "@/components/common/DetailDialog";
+import ExperienceStats from "../components/home/ExperienceStats";
+
+import GlobalMarkets from "../components/home/GlobalMarkets";
 
 export default function Home() {
   // State shared between sections lives here.
@@ -18,8 +21,13 @@ export default function Home() {
   return (
     <>
       <Hero />
+   
       <MarketStrip onSelectMarket={setMarket} />
       <Intro onOpenDetail={setDetail} />
+      <ExperienceStats />
+      {/* <ChairmanMessage /> */}
+      {/* <GlobalConnection /> */}
+      {/* <GlobalMarkets onSelectMarket={setMarket}/> */}
       <Portfolio onOpenDetail={setDetail} />
       <Presence market={market} onMarketChange={setMarket} />
       <Investors />
